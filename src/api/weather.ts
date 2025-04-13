@@ -20,10 +20,7 @@ class Weather {
     }
     return response.json();
   }
-  private async getCurrentWeather({
-    lat,
-    lon,
-  }: Coordinate): Promise<WeatherData> {
+  async getCurrentWeather({ lat, lon }: Coordinate): Promise<WeatherData> {
     const url = this.createUrl(`${WEATHER_API_CONFIG.BASE_URL}/weather`, {
       lat: lat.toString(),
       lon: lon.toString(),
