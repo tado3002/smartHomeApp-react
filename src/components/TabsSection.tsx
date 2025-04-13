@@ -1,10 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { RoomCards } from "./RoomCards";
 import { DeviceCards } from "./DeviceCards";
-
 export const TabsSection = () => {
   return (
-    <Tabs defaultValue="room" className="mx-6 mb-6">
+    <Tabs defaultValue="devices" className="mx-6 mb-6">
       <TabsList className="w-full h-12 rounded-lg bg-gray-200 border border-[#dee2e7] p-1">
         <TabsTrigger
           value="room"
