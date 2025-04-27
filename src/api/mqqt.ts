@@ -1,5 +1,5 @@
 import { MQQT_SERVER_API_CONFIG } from "./config";
-import { SmartLampData } from "./mqqt/types";
+import { LampTopic, SmartLampData } from "./mqqt/types";
 
 class Mqqt {
   private async fetchData<T>(endpoint: string): Promise<T> {
@@ -22,8 +22,8 @@ class Mqqt {
   async getCurrentState(): Promise<SmartLampData> {
     return this.fetchData<SmartLampData>("/lamp");
   }
-  async switchState(): Promise<SmartLampData> {
-    return this.fetchData<SmartLampData>("/lamp/switch");
+  async switchCurrentState(topic: LampTopic): Promise<SmartLampData> {
+    return this.fetchData<SmartLampData>(`/lamp/switch/${topic}`);
   }
 }
 
