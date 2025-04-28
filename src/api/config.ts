@@ -9,6 +9,6 @@ export const WEATHER_API_CONFIG = {
 };
 
 export const MQQT_SERVER_API_CONFIG = {
-  BASE_URL: "http://localhost:8700",
+  BASE_URL: import.meta.env.VITE_MQTT_BASE_URL,
   API_KEY: import.meta.env.VITE_MQQT_SERVER_API_KEY,
 };
